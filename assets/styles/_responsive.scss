@@ -1,0 +1,34 @@
+@include respond(phone){
+    .home-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .xbox {
+        .content {
+            p {
+                display: none;
+            }
+
+            h2 {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@include respond(sm-phone){
+    .home-cards {
+        grid-template-columns: 1fr;
+
+        .img {
+            display: flex;
+            background-color: blue;
+            flex-direction: column;
+            
+            img {
+                background-size: 200%;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.carbon {
+    height: 350px;
+    width: 100%;
+    background-image: url("../../../img/carbon.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+
+    .content {
+        width: 55%;
+        padding: 100px 0 0 30px;
+    }
+
+    p {
+        margin: 10px 0 20px;
+    }
+}
