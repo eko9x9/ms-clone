@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  
+  ms-clone:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: "yarn start"
+    ports: 
+      - "3000:80"
