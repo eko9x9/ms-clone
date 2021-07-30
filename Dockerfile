@@ -13,8 +13,8 @@ RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
 # Run the app
 FROM node:buster AS runner
 
-USER root
-RUN useradd -u 5000 node
+# USER root
+# RUN useradd -u 5000 node
 
 USER node
 WORKDIR /home/node/app
@@ -22,10 +22,10 @@ WORKDIR /home/node/app
 ENV NODE_ENV production
 
 COPY --from=builder /app/public ./public
-COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder --chown=node:node /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
-EXPOSE 3000
+RUN chown -Rh node:node ./.next
 
 CMD ["yarn", "start"]
