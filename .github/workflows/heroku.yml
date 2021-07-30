@@ -17,6 +17,5 @@ jobs:
           heroku_email: "eko.nr@yahoo.com"
           usedocker: true
           justlogin: true
-      - run: heroku auth:whoami
         env:
           NODE_ENV: production
