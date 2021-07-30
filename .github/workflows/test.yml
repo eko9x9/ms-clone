@@ -16,4 +16,5 @@ jobs:
     - name: Test build
       uses: actions/checkout@v2
   
-    - run: docker build .
+    - run: |
+            docker build .

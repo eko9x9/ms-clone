@@ -3,11 +3,13 @@ setup:
     - plan: heroku
       as: heroku
   config:
-    APP_NAME: heroku-dockerize
+    APP_NAME: try-ms-clone
+
 build:
   docker:
     web: Dockerfile
   config:
     NODE_ENV: production
+    
 run:
   web: yarn start
